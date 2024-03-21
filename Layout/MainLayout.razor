@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            <ErrorBoundary>
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent>
+                    <p class="alert alert-danger" role="alert">
+                        Oh, dear! Oh, my! - George Takei
+                    </p>
+                </ErrorContent>
+            </ErrorBoundary>
+        </article>
+    </main>
+</div>
